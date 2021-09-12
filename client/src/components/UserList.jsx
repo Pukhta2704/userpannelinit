@@ -24,7 +24,6 @@ const UserList = ({ users }) => {
               capitalize('abc a');
             }}
           />
-          <button>submit</button>
         </div>
         <div className="content">
           <ul className="header">
