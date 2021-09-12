@@ -296,7 +296,7 @@ nav i.open {
   top: -200vh;
   left: 10vw;
   z-index: 3;
-  transition: all 0.8s ease-out;
+  transition: all 1s ;
 }
 .add-user-form.edit button:nth-child(1) {
   position: absolute;
