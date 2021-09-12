@@ -1,0 +1,26 @@
+@mixin media-md {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1000px) {
+    @content;
+  }
+}
+@keyframes edit-icon-color-change-odd{
+  0% {
+    color: black;
+  }
+  100% {
+    color: rgba(25, 181, 254, 1);
+  }
+}
+@keyframes edit-icon-color-change-even {
+  0% {
+    color: black;
+  }
+  100% {
+    color: #73e2a7;
+  }
+}

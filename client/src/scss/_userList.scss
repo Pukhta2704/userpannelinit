@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@400;500;700&display=swap');
+.list-heading {
+  font-size: 2.5rem;
+  font-family: 'Glory', sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  padding-top: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  @include media-md {
+    margin-top: 2rem;
+  }
+}
+.userlist {
+  font-family: 'Glory', sans-serif;
+  width: 90vw;
+  margin: auto;
+  color: #212529;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  &.edit {
+    width: 100vw;
+    .content {
+      width: 90%;
+      .data {
+        li {
+          position: relative;
+          &:nth-child(odd) {
+            i {
+              animation: edit-icon-color-change-odd 2s infinite;
+            }
+          }
+          &:nth-child(even) {
+            i {
+              animation: edit-icon-color-change-even 2s infinite;
+            }
+          }
+          i {
+            position: absolute;
+            right: -20px;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    @include media-md {
+      width: 80vw;
+    }
+  }
+  .search-icon {
+    width: 100%;
+    padding-top: 2rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-md {
+      font-size: 2rem;
+    }
+    input {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      @include media-md {
+        height: 30px;
+        margin-left: 1rem;
+        width: 40%;
+      }
+    }
+    button {
+      height: 25px;
+      width: 55px;
+      font-size: 0.9rem;
+      padding: 0.1rem;
+      border-radius: 20%;
+      @include media-md {
+        font-size: 1.1rem;
+        height: 35px;
+        width: 65px;
+      }
+    }
+  }
+  .content {
+    .header {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 1rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      @include media-md {
+        font-size: 2.3rem;
+      }
+      @include media-lg {
+        font-size: 2.8rem;
+      }
+    }
+  }
+  .data {
+    li {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      font-weight: 500;
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      &:last-child {
+        padding-bottom: 2rem;
+      }
+      @include media-md {
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+      @include media-lg {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+    }
+  }
+  @include media-md {
+    width: 70vw;
+  }
+}

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+nav {
+  background-color: #273e47;
+  color: whitesmoke;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+  height: 90px;
+  @include media-md {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @include media-lg {
+    justify-content: space-between;
+    & > * {
+      padding: 0 7rem;
+    }
+  }
+  h1 {
+    font-family: 'Rye', cursive;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+    padding-top: 20px;
+    @include media-md {
+      padding: 0;
+    }
+    @include media-lg {
+      padding: 0 7rem;
+    }
+  }
+  ul {
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    height: 100vh;
+    width: 60vw;
+    background-color: #590925;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    transition: 0.5s all;
+    @include media-md {
+      position: static;
+      height: auto;
+      width: auto;
+      background-color: #273e47;
+      flex-direction: row;
+      padding-top: 0;
+    }
+    li {
+      font-size: 1.2rem;
+      color: white;
+      margin: 10px;
+      letter-spacing: 3px;
+      &.active {
+        border-bottom: 1px whitesmoke solid;
+      }
+      @include media-md {
+        margin-right: 18px;
+        letter-spacing: 1px;
+        a {
+          transition: 0.2s all;
+          &:hover {
+            color: #31c3e7;
+          }
+        }
+      }
+    }
+    &.open {
+      left: 0;
+    }
+  }
+  i {
+    position: absolute;
+    top: 3vh;
+    right: 5vw;
+    transition: 0.5s all;
+    &.open {
+      transform: rotate(720deg);
+    }
+    @include media-md {
+      position: static;
+      display: none !important;
+    }
+  }
+}

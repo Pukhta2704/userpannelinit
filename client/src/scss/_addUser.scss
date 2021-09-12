@@ -1,0 +1,105 @@
+.add-user-form {
+  font-family: 'Glory', sans-serif;
+  width: 80vw;
+  margin: auto;
+  color: #212529;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 5rem;
+  &.edit {
+    position: fixed;
+    top: -100vh;
+    left: 10vw;
+    z-index: 3;
+    transition: all 0.5s;
+    button:nth-child(1) {
+      position: absolute;
+      left: 16%;
+      background-color: transparent;
+      font-size: 1.1rem;
+      border-radius: 10%;
+      top:2%;
+      padding: .5rem;
+      color: red;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    i {
+      position: absolute;
+      right: 0;
+      padding: 2rem;
+      padding-bottom: 0;
+      color: red;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    form {
+      margin-top: 2rem;
+    }
+
+    &.open {
+      top: 5vh;
+      z-index: 3;
+    }
+    @include media-md {
+      left: 15vw;
+    }
+    @include media-lg {
+      left: 25vw;
+    }
+  }
+  @include media-md {
+    width: 70vw;
+  }
+  @include media-lg {
+    width: 50vw;
+  }
+  form {
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div {
+      margin-bottom: 1rem;
+      label {
+        font-size: 1.5rem;
+        @include media-md {
+          font-size: 1.8rem;
+        }
+      }
+      input {
+        margin-top: 0.2rem;
+        @include media-md {
+          width: 400px;
+        }
+      }
+      p {
+        color: red;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+        @include media-md {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    button {
+      background: white;
+      font-size: 1.1rem;
+      padding: 1rem;
+      border: 1px grey solid;
+      border-radius: 30%;
+      transition: 0.5s all;
+      &:hover {
+        cursor: pointer;
+        background-color: #273e47;
+        color: white;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
