@@ -8,10 +8,10 @@
   margin-bottom: 5rem;
   &.edit {
     position: fixed;
-    top: -200vh;
+    top: -130vh;
     left: 10vw;
     z-index: 3;
-    transition: all .8s ease-out;
+    transition: all .5s ;
     button:nth-child(1) {
       position: absolute;
       left: 16%;

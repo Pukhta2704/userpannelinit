@@ -293,10 +293,10 @@ nav i.open {
 }
 .add-user-form.edit {
   position: fixed;
-  top: -200vh;
+  top: -130vh;
   left: 10vw;
   z-index: 3;
-  transition: all 1s ;
+  transition: all 0.5s;
 }
 .add-user-form.edit button:nth-child(1) {
   position: absolute;
