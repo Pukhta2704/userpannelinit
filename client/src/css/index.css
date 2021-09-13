@@ -293,7 +293,7 @@ nav i.open {
 }
 .add-user-form.edit {
   position: fixed;
-  top: -130vh;
+  top: -180vh;
   left: 10vw;
   z-index: 3;
   transition: all 0.5s;
